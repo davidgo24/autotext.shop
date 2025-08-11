@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
     smsReadyTime: 'Hoy, 12 de agosto, 3:42 PM',
     smsReminder: '¡Hola John! Tu Camry vence pronto: 68,230 mi el 12 de dic. de 2025. Último: 65,230 con Sintético (5W-30). Gracias por elegir Montebello Lube & Tune — 2130 W Beverly Blvd. Lun–Sáb 8–5. (323) 727-2883. Responde STOP para dejar de recibir mensajes.',
     smsReminderTime: '22 de noviembre de 2025 — 10:00 AM',
-    quote1: '“Este sistema me ahorró horas y trajo de vuelta a 5 clientes que no habían venido en todo el año.”',
+    quote1: '“Con este sistema ya no me preocupa si los clientes regresan, porque les recuerda automáticamente. Ahora puedo seguir con confianza qué autos vuelven cada vez. El retorno del 500% lo vale por completo.”',
     quote1By: '— Dueño de taller, Montebello',
     quote2: '“Configúralo y olvídalo. Nuestros recordatorios mantienen llenas las bahías.”',
     quote2By: '— Gerente de servicio, Condado de LA',
