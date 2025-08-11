@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="AutoText.Shop — Keep cars coming back automatically with friendly pickup texts and smart reminders." />
+    <link rel="preload" as="image" href="./public/images/autoshopbay.jpg" />
     <title>AutoText.Shop — Keep Cars Coming Back Automatically</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,22 +15,24 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">AutoText.Shop</div>
-        <a class="btn btn-primary" href="#cta">Text Me for a Free Demo</a>
+          <div class="header-actions">
+          <button id="lang-toggle" class="btn btn-ghost" aria-label="Toggle Spanish">ESPAÑOL</button>
+          <a id="header-cta" class="btn btn-primary" href="sms:+16264665679" data-cta>Text Me for a Free Demo</a>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- Hero -->
-      <section class="hero" id="hero">
+      <section class="hero with-bg" id="hero" style="--hero-bg: url('./public/images/autoshopbay.jpg');">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <h1>
-              Never Miss a Customer. Keep Cars Coming Back — Automatically.
-            </h1>
-            <p class="muted">
-              Turn your loyal customers (and one-time Yelp customers) into repeat business with zero extra work.
+            <h1 id="hero-title">Fill Your Bays with More Repeat Customers</h1>
+            <p id="hero-sub" class="muted">
+              Automated reminders, loyalty rewards, and booking tools designed for oil change &amp; service shops.
             </p>
-            <a class="btn btn-primary btn-lg" href="#cta">Text Me for a Free Demo</a>
+            <p id="founder-hook" class="muted small founder-hook">Built by a UC Berkeley grad on a mission to help small service shops like yours grow repeat customers.</p>
+            <a id="primary-cta" class="btn btn-primary btn-lg" href="sms:+16264665679" data-cta>Get More Repeat Customers</a>
           </div>
           <div class="hero-phone" aria-label="Animated text message preview">
             <div class="phone-frame">
@@ -38,7 +41,7 @@
                 <div class="chat-title">AutoText.Shop</div>
 
                 <div class="bubble bubble-primary" id="bubble-ready">
-                  <p>
+                  <p id="sms-ready">
                     Hi John, your Toyota Camry is ready! Synthetic Blend (5W-30)
                     done at 65,230 mi. Next due: 68,230 mi on Dec 12, 2025.
                     Thank you for choosing Montebello Lube &amp; Tune — 2130 W
@@ -46,19 +49,35 @@
                     unsubscribe.
                   </p>
                 </div>
-                <div class="timestamp">Today, August 12th, 3:42 PM</div>
+                <div id="sms-ready-time" class="timestamp">Today, August 12th, 3:42 PM</div>
 
                 <div class="bubble bubble-primary bubble-reminder" id="bubble-reminder" aria-live="polite">
-                  <p>
+                  <p id="sms-reminder">
                     Hi John! Your Camry is due soon: 68,230 mi on Dec 12, 2025.
                     Last: 65,230 with Synthetic Blend (5W-30). Thank you for
                     choosing Montebello Lube &amp; Tune — 2130 W Beverly Blvd.
                     Mon-Sat 8-5. (323) 727-2883. Reply STOP to unsubscribe.
                   </p>
                 </div>
-                <div class="timestamp">November 22, 2025 — 10:00 AM</div>
+                <div id="sms-reminder-time" class="timestamp">November 22, 2025 — 10:00 AM</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Early Social Proof -->
+      <section class="testimonials">
+        <div class="container">
+          <div class="quote-grid">
+            <figure class="quote">
+              <blockquote id="quote1">“This system saved me hours and brought back 5 customers who hadn’t been in all year.”</blockquote>
+              <figcaption id="quote1-by">— Shop Owner, Montebello</figcaption>
+            </figure>
+            <figure class="quote">
+              <blockquote id="quote2">“Set it and forget it. Our reminders keep the bays full.”</blockquote>
+              <figcaption id="quote2-by">— Service Manager, LA County</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -67,8 +86,8 @@
       <section class="why">
         <div class="container why-grid">
           <div>
-            <h2>Why this works</h2>
-            <p class="muted">
+            <h2 id="why-title">Why this works</h2>
+            <p id="why-p" class="muted">
               Customers forget. Window stickers get ignored. But texts are read.
               We send a friendly pickup text the day of service and a smart
               reminder text before the next one — so your bays stay full.
@@ -76,7 +95,7 @@
           </div>
           <div class="stat">
             <div class="stat-value">98%</div>
-            <div class="stat-label">of texts are opened within 3 minutes.</div>
+            <div id="stat-label" class="stat-label">of texts are opened within 3 minutes.</div>
           </div>
         </div>
       </section>
@@ -84,65 +103,128 @@
       <!-- Money Math -->
       <section class="money">
         <div class="container">
-          <h2>The Money Math</h2>
+          <h2 id="money-title">The Money Math</h2>
           <div class="card-grid three">
             <div class="card">
-              <div class="card-label">Avg Oil Change Ticket</div>
+              <div id="avg-ticket" class="card-label">Avg Oil Change Ticket</div>
               <div class="card-value">$65–$85</div>
             </div>
             <div class="card">
-              <div class="card-label">Variable Cost</div>
+              <div id="variable-cost" class="card-label">Variable Cost</div>
               <div class="card-value">$30–$45</div>
             </div>
             <div class="card">
-              <div class="card-label">Profit per Oil Change</div>
+              <div id="profit-per" class="card-label">Profit per Oil Change</div>
               <div class="card-value">$25–$45</div>
             </div>
           </div>
 
           <div class="card-grid two mt-lg">
             <div class="card">
-              <div class="card-label">Worst case</div>
-              <div class="card-value">$20 profit</div>
-              <div class="card-sub">Low ticket, high costs</div>
+              <div id="worst-label" class="card-label">Worst case</div>
+              <div id="worst-value" class="card-value">$20 profit</div>
+              <div id="worst-sub" class="card-sub">Low ticket, high costs</div>
             </div>
             <div class="card">
-              <div class="card-label">Best case</div>
-              <div class="card-value">$55 profit</div>
-              <div class="card-sub">High ticket, low costs</div>
+              <div id="best-label" class="card-label">Best case</div>
+              <div id="best-value" class="card-value">$55 profit</div>
+              <div id="best-sub" class="card-sub">High ticket, low costs</div>
             </div>
           </div>
 
-          <p class="muted center mt-md">
+          <p id="profit-note" class="muted center mt-md">
             1 extra returning customer = $25–$45 profit. You keep the rest.
           </p>
+        </div>
+      </section>
+
+      <!-- ROI Visual: Profits from 500 monthly reminders -->
+      <section class="roi-visual" aria-labelledby="roi-heading">
+        <div class="container">
+          <h2 id="roi-heading" class="center">What 500 Smart Reminders Can Earn</h2>
+          <div class="card assumptions">
+            <div class="assump-grid">
+              <div>
+                <div id="ass1-title" class="assump-title">Monthly reminders scheduled</div>
+                <div class="assump-value">500</div>
+              </div>
+              <div>
+                <div id="ass2-title" class="assump-title">Take action (5%)</div>
+                <div id="ass2-value" class="assump-value">25 customers</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bar-chart">
+            <div class="bar-card">
+              <div class="bar" style="--h:62.5%">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="bar-caption">
+                <div class="bar-amount">$625</div>
+                <div id="bar1-sub" class="bar-sub">at $25 profit per oil change</div>
+              </div>
+            </div>
+            <div class="bar-card">
+              <div class="bar" style="--h:100%">
+                <div class="bar-fill"></div>
+              </div>
+              <div class="bar-caption">
+                <div class="bar-amount">$1,000</div>
+                <div id="bar2-sub" class="bar-sub">at $40 profit per oil change</div>
+              </div>
+            </div>
+          </div>
+
+          <p id="roi-footnote" class="muted center small mt-md">Assumes 500 monthly reminders to customers due for service, with 5% returning (25 oil changes). Profit range covers $25–$40 profit per oil change.</p>
+        </div>  
+      </section>
+
+      <!-- Busy Bay Image -->
+      <section class="busy-bay-section">
+        <div class="container">
+          <figure class="busy-bay">
+            <img src="./public/images/autoshopbay.jpg" alt="Busy auto shop bay" loading="lazy"/>
+            <figcaption id="busy-caption">Your bays — booked solid, week after week.</figcaption>
+          </figure>
         </div>
       </section>
 
       <!-- Pricing -->
       <section class="pricing">
         <div class="container">
-          <h2>Simple, Transparent Pricing</h2>
+          <p id="roi-line" class="muted center roi">Just one extra oil change per week pays for this.</p>
+          <h2 id="pricing-title">Simple, Transparent Pricing</h2>
           <div class="pricing-grid">
             <div class="pricing-card">
               <div class="price">
                 <span class="amount">$99</span><span class="per">/month</span>
               </div>
-              <div class="price-sub">+ Free Setup (Save $1,000+ in first year)</div>
+              <div id="price-sub" class="price-sub">+ Free Setup (Save $1,000+ in first year)</div>
               <ul class="list">
-                <li>First 1,000 SMS included/month</li>
-                <li>No contracts — cancel anytime</li>
-                <li>Performance Bonus model (only pay extra when extra texts bring customers back)</li>
+                <li id="inc-sms">First 1,000 SMS included/month</li>
+                <li id="cancel-anytime">No contracts — cancel anytime</li>
+                <li id="perf-bonus">Performance Bonus model (only pay extra when extra texts bring customers back)</li>
               </ul>
             </div>
             <div class="pricing-card alt">
-              <h3>Overage pricing</h3>
+              <h3 id="overage-title">Overage pricing</h3>
               <ul class="list compact">
-                <li>Pickup Texts over 1,000/mo → $0.10 each</li>
-                <li>Reminder Texts → $0.40 each (only when sent)</li>
+                <li id="pickup-overage">Pickup Texts over 1,000/mo → $0.10 each</li>
+                <li id="reminder-overage">Reminder Texts → $0.40 each (only when sent)</li>
               </ul>
-              <a class="btn btn-primary mt-md" href="#cta">Text Me for a Free Demo</a>
+              <a id="pricing-cta" class="btn btn-primary mt-md" href="sms:+16264665679" data-cta>Text Me for a Free Demo</a>
             </div>
+          </div>
+          <p id="risk-reducer" class="muted center mt-md">No contracts. Cancel anytime.</p>
+        </div>
+      </section>
+
+      <!-- Urgency Banner -->
+      <section class="banner">
+        <div class="container">
+          <div id="banner-text" class="banner-inner">
+            Early access: Now accepting only 10 local shops for our pilot program.
           </div>
         </div>
       </section>
@@ -150,33 +232,46 @@
       <!-- How it works -->
       <section class="how">
         <div class="container">
-          <h2>How it works</h2>
+          <h2 id="how-title">How it works</h2>
           <div class="card-grid three">
             <div class="card step">
               <div class="step-label">Step 1</div>
-              <div class="step-title">We connect your shop</div>
-              <div class="step-sub">Takes &lt;10 min</div>
+              <div id="step1-title" class="step-title">We connect your shop</div>
+              <div id="step1-sub" class="step-sub">Takes &lt;10 min</div>
             </div>
             <div class="card step">
               <div class="step-label">Step 2</div>
-              <div class="step-title">Pickup text sent</div>
-              <div class="step-sub">Triggered when job is done</div>
+              <div id="step2-title" class="step-title">Pickup text sent</div>
+              <div id="step2-sub" class="step-sub">Triggered when job is done</div>
             </div>
             <div class="card step">
               <div class="step-label">Step 3</div>
-              <div class="step-title">Reminder text sent</div>
-              <div class="step-sub">Before next service — zero extra work</div>
+              <div id="step3-title" class="step-title">Reminder text sent</div>
+              <div id="step3-sub" class="step-sub">Before next service — zero extra work</div>
             </div>
           </div>
-          <p class="muted center small mt-md">Already trusted by shops saving thousands in lost repeat business.</p>
+          <p id="trusted-line" class="muted center small mt-md">Already trusted by shops saving thousands in lost repeat business.</p>
         </div>
       </section>
 
       <!-- Big CTA -->
       <section class="cta" id="cta">
         <div class="container center">
-          <h2 class="cta-title">Every customer you keep is one you don’t have to replace.</h2>
-          <a class="btn btn-primary btn-xl" href="sms:+18005551234?&body=I'd%20like%20a%20demo%20of%20AutoText.Shop">Text Me for a Free Demo</a>
+          <h2 id="cta-big-title" class="cta-title">Every customer you keep is one you don’t have to replace.</h2>
+          <a id="footer-cta" class="btn btn-primary btn-xl" href="sms:+16264665679" data-cta>Text Me for a Free Demo</a>
+        </div>
+      </section>
+
+      <!-- Founder Strip (bottom) -->
+      <section class="founder-strip">
+        <div class="container strip">
+          <img class="avatar" src="./public/images/davidpro.jpg" alt="Founder headshot" loading="lazy" />
+          <div class="text">
+            <p id="founder-text" class="muted">
+              I build technology to help small service businesses thrive not slow them down. Let’s make sure to remind the clients that already love you to come back when it is time for their next service.
+            </p>
+            <p id="founder-signature" class="signature">— David G., Founder</p>
+          </div>
         </div>
       </section>
     </main>
